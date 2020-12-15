@@ -1,61 +1,77 @@
 
 public class Uso_Juego {
 	
-	public static int pintaMenu() {
-		// Guardar un nuevo juego
-		// Poner puntuación a un juego
-		// Ver todos los juegos
-		return 0;
-	}
-	
-	public static void verTodoslosJuegos(Juego vJuegos[]) {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 		
-	}
+		verJuegos();
 	
-	public static void guardarJuego(Juego vJuegos[]) {
-		
-		//Pedir los datos del Juego con try - catch
+	
 
-		//Buscar posición libre en el vector
-		for (int i = 0; i < vJuegos.length; i++) {
-			if(vJuegos[i] == null) {
-				vJuegos[i] = new Juego("GTA", 35, false);
+		
+		
+
+	}
+}
+
+	class Juego {
+		
+		public void verJuegos() {
+			
+			Juego[] misjuegos = new Juego[100];
+			
+			
+			misjuegos[0] = new Juego("Minecraft",100, true);
+			misjuegos[1] = new Juego("Fortnite",50, true);
+			misjuegos[2] = new Juego("Ratchet & Clank",200, false);
+			
+			
+			for (int i = 0; i < misjuegos.length; i++) {
+				if(misjuegos[i] != null) {
+				System.out.println(misjuegos[i].dameNombre() + " tiene un record de " 
+			+ misjuegos[i].dameRecord() + " puntos" + " y " + misjuegos[i].configuraMulti());
+				}
 			}
+			
 		}
 		
-	}
-	
-	public static void ponerPuntuacionJuego(Juego cJuegos[]) {
+		public String configuraMulti() {
+			if(multijugador == true) {
+				return " es multijugador";
+			}else {
+				return " no es multijugador";
+			}
+			
+		}
 		
-	}
-
-	public static void main(String[] args) {
-		
-		
-		Juego vJuegos[] = new Juego[100];
-		
-		Juego juego1 = new Juego("CyberPunk");
-		Juego juego2 = new Juego("Los Sims");
-		Juego juego3 = new Juego("FIFA");
-		
-		vJuegos[0] = juego1;
-		vJuegos[1] = juego2;
-		vJuegos[2] = juego3;
-		vJuegos[3] = new Juego ("Tetris");
-		
-		vJuegos[2].setMultijugador(true);
-		vJuegos[2].ponerRecord(100);
-		
-		
-		for (int i = 0; i < vJuegos.length; i++) {
-			if (vJuegos[i] != null && vJuegos[i].isMultijugador() == false) {
-				System.out.println(vJuegos[i].toString());
-				}
+		public Juego(String nom, int rec, boolean multi){
+			
+			nombre = nom;
+			
+			record = rec;
+			
+			multijugador = multi;
 			
 		}
 		
 		
+		public String dameNombre() { // GETTER
+			return nombre;
+		}
+		
+		public int dameRecord() {  // GETTER
+			return record;
+		}
+		
+		public boolean dameMulti() {
+			return multijugador;
+		}
+		
+		private String nombre;
+		private int record;
+		private boolean multijugador;
+	
+  }
+	
 
-	}
 
-}
