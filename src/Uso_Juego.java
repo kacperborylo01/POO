@@ -4,10 +4,10 @@ public class Uso_Juego {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		verJuegos();
+		
 	
-	
-
+		Juego j = new Juego();
+		j.verJuegos();
 		
 		
 
@@ -15,6 +15,9 @@ public class Uso_Juego {
 }
 
 	class Juego {
+		public Juego() {
+			// TODO Auto-generated constructor stub
+		}
 		
 		public void verJuegos() {
 			
@@ -63,7 +66,7 @@ public class Uso_Juego {
 			return record;
 		}
 		
-		public boolean dameMulti() {
+		public boolean dameMulti() { //GETTER
 			return multijugador;
 		}
 		

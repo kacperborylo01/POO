@@ -15,11 +15,11 @@ public class Uso_Coche {
 		
 		System.out.println(micoche.dimeColor());
 		
-		micoche.configura_asientos(JOptionPane.showInputDialog("¿Tiene aientos de cuero?"));
+		micoche.configura_asientos(JOptionPane.showInputDialog("ï¿½Tiene asientos de cuero?"));
 		
 		System.out.println(micoche.dime_asientos());
 		
-		micoche.configura_climatizador(JOptionPane.showInputDialog("¿Tiene climatizador?"));
+		micoche.configura_climatizador(JOptionPane.showInputDialog("ï¿½Tiene climatizador?"));
 		
 		System.out.println(micoche.dime_climatizador());
 		
